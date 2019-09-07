@@ -6,7 +6,11 @@ body {
   margin: 0;
   font-family: Avenir, sans-serif; }
 
-.top {
+a {
+  text-decoration: none;
+  color: #3d4e61; }
+
+.head {
   height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -16,44 +20,57 @@ body {
           justify-content: space-between;
   -webkit-box-shadow: 0 1px 0 #e1e7ed;
           box-shadow: 0 1px 0 #e1e7ed; }
-  .top__logo {
+  .head__logo {
     display: block;
     width: 30px;
-    height: 30px;
     background-image: url(./../images/rectangle.png);
     margin: 15px 0 15px 26px;
     -webkit-transition: -webkit-transform 0.5s;
     transition: -webkit-transform 0.5s;
     transition: transform 0.5s;
     transition: transform 0.5s, -webkit-transform 0.5s; }
-    .top__logo:hover {
+    .head__logo:hover {
       -webkit-transform: scaleX(-1);
               transform: scaleX(-1); }
-  .top__link {
+  .head__link {
     font-size: 16px;
     line-height: 19px;
     color: #3d4e61;
     text-decoration: none;
     margin-right: 30px;
     font-weight: bold; }
-  .top__menu {
+    .head__link a {
+      display: block;
+      -webkit-transition: color 0.25s, -webkit-transform 0.15s;
+      transition: color 0.25s, -webkit-transform 0.15s;
+      transition: transform 0.15s, color 0.25s;
+      transition: transform 0.15s, color 0.25s, -webkit-transform 0.15s; }
+      .head__link a:hover {
+        color: #118488;
+        -webkit-transform: scale(1.08);
+                transform: scale(1.08); }
+  .head__menu {
     height: 60px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding-top: 10px;
+    padding-top: 14px;
     margin-right: 20px; }
-  .top__account {
+  .head__account {
     height: 30px; }
-  .top__menu-container {
-    margin-top: 5px; }
+  .head__menu-container {
+    margin-top: 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style-type: none; }
 
-.main {
+.page {
   color: #3d4e61; }
-  .main__poster {
+  .page__poster {
     width: 100%;
     margin-bottom: 40px; }
-  .main__container {
+  .page__container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -61,17 +78,17 @@ body {
         justify-content: space-around;
     width: 1000px;
     margin: auto; }
-  .main__container-card {
+  .page__container_card {
     width: 500px; }
-  .main__main-heading {
+  .page__main-heading {
     font-size: 36px;
     line-height: 42px;
     color: #3d4e61; }
-  .main__main-heading-span {
+  .page__main-heading-span {
     font-size: 16px;
     line-height: 19px;
     color: #687c94; }
-  .main__characteristics {
+  .page__characteristics {
     font-size: 16px;
     line-height: 19px;
     color: #3d4e61;
@@ -80,20 +97,28 @@ body {
     display: -ms-flexbox;
     display: flex;
     padding-left: 0;
-    margin-bottom: 28px; }
-  .main__text {
+    margin: 28px 0; }
+  .page__text {
     font-size: 16px;
     line-height: 24px;
     color: #3d4e61;
     width: 490px;
     height: 120px; }
-  .main__contact-h {
-    display: block;
+  .page__contact-h {
+    display: inline-block;
     font-size: 16px;
     line-height: 19px;
     color: #3d4e61;
     margin-bottom: 44px;
-    font-weight: bold; }
+    font-weight: bold;
+    -webkit-transition: color 0.25s, -webkit-transform 0.15s;
+    transition: color 0.25s, -webkit-transform 0.15s;
+    transition: transform 0.15s, color 0.25s;
+    transition: transform 0.15s, color 0.25s, -webkit-transform 0.15s; }
+    .page__contact-h:hover {
+      color: #118488;
+      -webkit-transform: scale(1.08);
+              transform: scale(1.08); }
 
 .form {
   width: 330px;
@@ -131,7 +156,7 @@ body {
     color: white;
     display: block;
     text-align: center;
-    padding-top: 12px;
+    padding-top: 14px;
     text-decoration: none;
     -webkit-transition: background 0.5s, color 0.5s, border 0.5s;
     transition: background 0.5s, color 0.5s, border 0.5s; }
@@ -157,14 +182,28 @@ body {
   .amenities__item {
     width: 176px;
     margin-bottom: 13px; }
-  .amenities_show {
+  .amenities__show {
     text-decoration: none;
     font-size: 16px;
     line-height: 19px;
     font-weight: bold;
     color: #3d4e61;
     margin-bottom: 66px;
-    display: block; }
+    display: inline-block;
+    margin-top: 30px;
+    -webkit-transition: color 0.25s, -webkit-transform 0.15s;
+    transition: color 0.25s, -webkit-transform 0.15s;
+    transition: transform 0.15s, color 0.25s;
+    transition: transform 0.15s, color 0.25s, -webkit-transform 0.15s; }
+    .amenities__show:hover {
+      color: #118488;
+      -webkit-transform: scale(1.08);
+              transform: scale(1.08); }
+
+.reviews___heading {
+  font-size: 28px;
+  line-height: 33px;
+  color: #3d4e61; }
 
 .reviews__review-text {
   font-size: 16px;
@@ -222,7 +261,7 @@ body {
   border: 1px solid #118488;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding-top: 12px;
+  padding-top: 14px;
   margin-bottom: 75px;
   margin-top: 30px;
   -webkit-transition: background 0.5s, color 0.5s, border 0.5s;
@@ -237,25 +276,40 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 40px 0;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   background: #fff;
   -webkit-box-shadow: 0 -1px 0 #e1e7ed;
           box-shadow: 0 -1px 0 #e1e7ed; }
-
-.bottom a,
-.bottom span {
-  display: block;
-  font-size: 16px;
-  line-height: 19px;
-  color: #3d4e61; }
-
-.bottom a {
-  text-decoration: none;
-  margin-bottom: 9px; }
-
-.bottom span {
-  font-weight: bold;
-  margin-bottom: 20px; }
+  .bottom__span {
+    display: block;
+    font-size: 16px;
+    line-height: 19px;
+    color: #3d4e61;
+    font-weight: bold;
+    margin-bottom: 20px; }
+  .bottom__link {
+    display: block;
+    font-size: 16px;
+    line-height: 19px;
+    color: #3d4e61;
+    text-decoration: none;
+    margin-bottom: 9px;
+    -webkit-transition: color 0.25s, -webkit-transform 0.15s;
+    transition: color 0.25s, -webkit-transform 0.15s;
+    transition: transform 0.15s, color 0.25s;
+    transition: transform 0.15s, color 0.25s, -webkit-transform 0.15s; }
+    .bottom__link:hover {
+      color: #118488;
+      -webkit-transform: scale(1.08);
+              transform: scale(1.08); }
+  .bottom .section {
+    list-style-type: none;
+    font-size: 16px;
+    line-height: 19px;
+    color: #3d4e61; }
+    .bottom .section li {
+      margin-bottom: 9px; }
 
 /*# sourceMappingURL=main.css.map */
